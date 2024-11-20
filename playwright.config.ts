@@ -1,6 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { URLS, TEXTS } from './utils/testData.js';
-import { login, scheduleAppointment, fillPrescriptionForm, confirmAppointment } from './utils/helpers.js';
+
 
 /**
  * Read environment variables from file.
@@ -14,6 +13,7 @@ import { login, scheduleAppointment, fillPrescriptionForm, confirmAppointment } 
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -40,6 +40,7 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+  
 
     // {
     //   name: 'firefox',
